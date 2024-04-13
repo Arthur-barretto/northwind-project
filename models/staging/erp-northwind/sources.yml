@@ -9,7 +9,28 @@ sources:
       - name: employees
         columns:
           - name: employee_id
-            testes:
+            tests:
+              - unique
+              - not_null
+
+      - name: products
+        columns:
+          - name: product_id
+            tests:
+              - unique
+              - not_null
+
+      - name: categories
+        columns:
+          - name: category_id
+            tests:
+              - unique
+              - not_null
+
+      - name: suppliers
+        columns:
+          - name: supplier_id
+            tests:
               - unique
               - not_null
               
