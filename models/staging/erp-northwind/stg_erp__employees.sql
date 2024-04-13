@@ -2,23 +2,18 @@ with
     source_employees as (
         select 
             cast(employee_id as int) as employee_id
-            , cast(last_name as string) as sobrenome
-            , cast(first_name as string) as nome
-            , cast(first_name  || ' ' || last_name as string) as nome_completo 
-            --, title
-            --, title_of_courtesy
-            , cast(birth_date as date) as nascimento
-            , cast(hire_date as date) as data_contratacao
-            , address as endereco
-            , city as cidade
-            , region as regiao
-            , postal_code as cep
-            , country as pais
-            --, home_phone
-            --, extension
-            , notes as notas
-            , cast(reports_to as int) as gerente_id
-            --, photo_path
+            , cast(reports_to as int) as manager_id
+            , cast(last_name as string) as last_name
+            , cast(first_name as string) as first_name
+            , cast(first_name  || ' ' || last_name as string) as full_name 
+            , cast(birth_date as date) as birth_date
+            , cast(hire_date as date) as hire_date
+            , address
+            , city
+            , region
+            , postal_code as zip_code
+            , country
+            , notes
         from {{ source('erp', 'employees') }}
     )
 

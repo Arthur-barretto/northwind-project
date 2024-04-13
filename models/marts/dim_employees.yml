@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: dim_employees
+    description: Dimensão de funcionários da Northwind.
+    columns:       
+      - name: employee_id
+        description: primary key for employee table
+        tests:
+          - unique
+          - not_null
+          
+      - name: manager_id
+        description: described column
+      - name: last_name
+        description: described column
+      - name: first_name
+        description: described column
+      - name: full_name 
+        description: described column
+      - name: full_name as manager_name
+        description: described column
+      - name: birth_date
+        description: described column
+      - name: hire_date
+        description: described column
+      - name: address
+        description: described column
+      - name: city
+        description: described column
+      - name: region
+        description: described column
+      - name: zip_code
+        description: described column
+      - name: country
+        description: described column
+      - name: notes
+        description: described column
