@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: fct_sales
+    description: Dimensão de funcionários da Northwind.
+    columns:       
+      - name: pk_sales
+        description: primary key for product table
+        tests:
+          - unique
+          - not_null
