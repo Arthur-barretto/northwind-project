@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: int_sales__order_items
+    description: Intermediate model to build fact_sales.
+    columns:       
+      - name: pk_sales
+        description: primary key for order_items table
+        tests:
+          - unique
+          - not_null

@@ -34,4 +34,16 @@ sources:
               - unique
               - not_null
               
+      - name: orders
+        description: 1 line per order. Includes cancelled and deleted orders. 
+        columns:
+          - name: order_id
+            tests:
+              - unique
+              - not_null
+              
+      - name: order_details
+        description: 1 line per order. Includes cancelled and deleted orders.
+
+              
  
